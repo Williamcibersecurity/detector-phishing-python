@@ -1,24 +1,27 @@
-# Desafio de Detecção de Phishing
+# Detecção de Phishing em E-mails
 
-Este repositório contém uma solução simples para detectar e-mails de phishing com base em palavras-chave específicas. O código verifica se o corpo do e-mail contém termos frequentemente usados em tentativas de phishing.
+Este projeto é uma implementação simples em Python para detectar e-mails suspeitos de phishing, verificando se o corpo do e-mail contém palavras-chave frequentemente associadas a tentativas de fraude.
 
-## Passos do Desafio
+## Descrição do Código
 
-### 1. Análise do Problema
-O objetivo do desafio era criar uma função simples para detectar e-mails de phishing. A função precisa identificar palavras-chave frequentemente associadas a e-mails de phishing, como "ganhe", "prêmio", "urgente", "desconto", entre outras.
+O código foi desenvolvido para ajudar a identificar e-mails de phishing por meio da busca de palavras-chave específicas. Quando um e-mail contém termos como "ganhe", "prêmio", "urgente", "desconto", entre outros, o código classifica o e-mail como **Phishing**. Caso contrário, ele é classificado como **Seguro**.
 
-### 2. Implementação da Solução
-A solução foi implementada em Python, utilizando uma lista de palavras suspeitas e verificando se essas palavras estavam presentes no corpo do e-mail.
+## Como Funciona
 
-### 3. Testes Realizados
-Foram feitos testes com várias mensagens, incluindo e-mails legítimos e e-mails de phishing. O código classifica corretamente os e-mails em "Phishing" ou "Seguro".
+1. **Função `verificar_phishing`**:
+   A função recebe o corpo do e-mail como entrada e verifica se ele contém alguma das palavras-chave associadas a phishing. As palavras suspeitas são:
+   - 'ganhe'
+   - 'prêmio'
+   - 'urgente'
+   - 'desconto'
+   - 'click'
+   - 'promoção'
 
-### 4. Ferramentas Utilizadas
-- Python (versão 3.x)
-- Biblioteca sys para leitura de entradas via terminal
+2. **Entrada do Usuário**:
+   O e-mail é lido da entrada padrão, ou seja, o código espera que o texto do e-mail seja fornecido diretamente ao executar o script.
 
-## Como Rodar o Código
+3. **Processamento**:
+   O código percorre a lista de palavras suspeitas e verifica se alguma delas aparece no corpo do e-mail. Se encontrar uma palavra suspeita, o código retorna a classificação "Phishing", indicando que o e-mail é potencialmente perigoso. Caso contrário, retorna "Seguro".
 
-1. Clone este repositório para o seu computador:
-   ```bash
-   git clone https://github.com/SEU_USUARIO/desafio_phishing_detection.git
+4. **Saída**:
+   O resultado da verificação (se é **Phishing** ou **Seguro**) é impresso no console.
